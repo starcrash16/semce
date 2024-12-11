@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+
+     <!--normalize-->
+     <link rel="preload" href="/CSS/normalize.css" as="style">
+     <link rel="stylesheet" href="/CSS/normalize.css">
+ 
+     <!--Hoja de estilos-->
+     <link rel="preload" href="/CSS/style.css" as="style">
+ 
+     <!--Para la barra de navegación-->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    
+     <!--fuente-->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+ 
+     <link href="/CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+   <!--barra de navegacion-->
+    <header class="header nav-bg">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+    
+            <a href="#" class="enlace">
+                <img src="/img/SEMCE.png" alt="imgaen del logo de SEMCE" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeriaProyectos.html">Galería de Proyectos</a></li>
+                <li><a class="active" href="catalogo.html">Catalogo</a></li>
+                <li><a href="https://wa.me/524493575845?text=Me%20interesa%20contratar%20tus%20servicios">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor sombra">
+        <div class="contTextos">
+            <h1>Mini Splits</h1>
+        </div>
+
+        <!--WHATSSAP-->
+        <!-- Botón de WhatsApp -->
+        <button class="btn-whatsapp" id="openChat">
+            <img src="/img/whatsApp.png" alt="Abrir chat"> <!--logo de whatsapp, asegúrate de que la ruta de la imagen sea correcta -->
+        </button>
+
+        <!-- Cuadro de chat -->
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                Contactar a WhatsApp
+                <button class="close-chat" id="closeChat">&times;</button>
+            </div>
+            <div class="chat-body">
+                <div id="chatMessage" class="chat-text">
+                    ¡Hola! Me interesa contratar tus servicios.
+                </div>
+                <button class="send-button" id="sendMessage">
+                    <img src="/img/enviar.png" alt="Enviar mensaje"> <!--logo de enviar de whatsapp, asegúrate de que la ruta de la imagen sea correcta -->
+                </button>
+            </div>
+        </div>
+
+        <script src="/scripts/wats.js"></script> <!-- Enlace al archivo de script -->
+    </main>
+    
+</body>
+</html>

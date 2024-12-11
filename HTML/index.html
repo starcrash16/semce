@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMCE</title>
+
+    <!--normalize-->
+    <link rel="preload" href="/CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="/CSS/normalize.css">
+
+    <!--Hoja de estilos-->
+    <link rel="preload" href="/CSS/style.css" as="style">
+
+    <!--Para la barra de navegación-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+   
+    <!--fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <link href="/CSS/style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!--barra de navegacion-->
+    <header class="header nav-bg">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+        
+            <a href="#" class="enlace">
+            <img src="/img/SEMCE.png" alt="imgaen del logo de SEMCE" class="logo">
+            </a>
+            <ul>
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeriaProyectos.html">Galería de Proyectos</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="https://wa.me/524493575845?text=Me%20interesa%20contratar%20tus%20servicios">Contacto</a></li>
+           
+            </ul>
+        </nav>
+    </header>
+
+    <!--Logo y titulo-->
+    <section>
+        <div class="parteCentral">
+            <h1>Refrigeración , Aire acondicionado y Electromecánica<br>Aguascalientes, Ags.</h1>
+            <img class=logoParteCentral src="/img/SEMCE_removing.png">
+        </div>
+       
+    </section>
+    <!--Incitar al espectador-->
+    <section>
+        <div class="recuadroContacto">
+            <h2>
+                ¿Necesitas un especialista en <span class="span1">aire acondicionado o refrigeración</span>?
+            </h2>
+
+             <!--Clase de boton para generar dos iguales-->
+            <a class="boton" href="https://wa.me/524493575845?text=Me%20interesa%20contratar%20tus%20servicios"> Contáctanos</a>
+        </div>
+    </section>
+
+    <!--Parte principal de la pagina-->
+    <main id="sobre-nosotros" class="contenedor sombra">
+
+
+        <div class="contTextos">
+            <p>
+                Con <span class="span2">21 años de experiencia en Aguascalientes, </span> somos una empresa dedicada a ofrecer soluciones integrales en refrigeración y aire acondicionado, abarcando servicios empresariales y residenciales.<br><h3 class="zoomH">Nuestro compromiso con la calidad y la satisfacción del cliente nos distingue en cada proyecto.</h2>
+            </p>
+        </div>
+
+        
+
+        <!--contendor de Misión-->
+        <div class="contenedor-cuadricula ">
+            <div class="cuadro">
+                <h2>MISIÓN</h2>
+                <p>
+                    Nuestra misión es proporcionar soluciones eficientes y confiables de aire acondicionado que garanticen el confort de nuestros clientes, tanto en sus hogares como en sus negocios, a través de tecnología innovadora y un servicio excepcional.
+                </p>
+            </div>
+
+            <div class="cuadro contimagen">
+                <div class="contenedor-imagenesProyectos">
+                    <img src="/img/man2 1.png" alt="Imagen de un instalador de aire acondicionado" class="imagenProyecto">
+                </div>
+            </div>
+
+        </div>
+
+        <!--contendor de visión-->
+        <div class="contenedor-cuadricula ">
+
+            <div class="cuadro contimagen">
+                <div class="contenedor-imagenesProyectos">
+                    <img src="/img/man1 1.png" alt="Imagen de un instalador de aire acondicionado" class="imagenProyecto">
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <h2>VISIÓN</h2>
+                <p>
+                    Nuestra visión es ser la empresa líder en el mercado de sistemas de climatización en México, reconocida por su compromiso con la sostenibilidad, la innovación y la satisfacción del cliente.
+                </p>
+            </div>
+        </div>
+
+        <div class="contTextos textoDescubre">
+            <p>
+                Descubre cómo nuestros expertos en <span class="span3">refrigeración y aire acondicionado</span> pueden brindarte soluciones eficientes y personalizadas para tu hogar o empresa.</p>
+            <!--Clase de boton para generar dos iguales-->
+            <a class="boton" href="/HTML/servicios.html">  Ver servicios</a>
+        </div>
+
+        <!--WHATSSAP-->
+        <!-- Botón de WhatsApp -->
+        <button class="btn-whatsapp" id="openChat">
+            <img src="/img/whatsApp.png" alt="Abrir chat"> <!--logo de whatsapp, asegúrate de que la ruta de la imagen sea correcta -->
+        </button>
+
+        <!-- Cuadro de chat -->
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                Contactar a WhatsApp
+                <button class="close-chat" id="closeChat">&times;</button>
+            </div>
+            <div class="chat-body">
+                <div id="chatMessage" class="chat-text">
+                    ¡Hola! Me interesa contratar tus servicios.
+                </div>
+                <button class="send-button" id="sendMessage">
+                    <img src="/img/enviar.png" alt="Enviar mensaje"> <!--logo de enviar de whatsapp, asegúrate de que la ruta de la imagen sea correcta -->
+                </button>
+            </div>
+        </div>
+
+
+    </main>
+
+    
+   <script src="/scripts/wats.js"></script> <!-- Enlace al archivo de script -->
+    
+
+    <footer>
+        <p class="textFooter">2024 SEMCE.<br>Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

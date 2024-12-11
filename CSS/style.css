@@ -1,0 +1,920 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root{
+    --primario:#0077C0;
+    --primClaro:#C7EEFF;
+    --letrasNav:#D9D9D9;
+    --blanco:#FFFFFF;
+    --primarioInt:#21209C;
+    --primarioInt2:#071952;
+    --negro:#000000;
+    --botonLetras:#C7EEFF;
+    --resaltar:#DC6B19;
+}
+
+/*HTML- comportamiento*/
+html{
+    font-size: 62.5;
+    box-sizing: border-box;
+    scroll-snap-stop: y mandatory;
+    scroll-behavior: smooth;
+
+    
+}
+
+span{
+    color:var(--resaltar);
+    font-weight: bold;
+}
+
+*{
+    font-family:Montserrat;
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+/*utilidades*/
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+/*Body*/
+body{
+    background: linear-gradient(to bottom, #C7EEFF,var(--primario));
+}
+
+/*Barra de navegacion*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color:var(--primario);
+    height: 80px;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 40px;
+    border-radius: 5rem;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display:inline-block;
+    line-height: 80px; /*altutra total*/
+    margin: 0 5px;
+
+}
+
+nav ul li a{
+    color:var(--botonLetras);
+    font-size: 18px;
+    /*Arriba y abajo , bordes de los lados*/
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active , li a:hover{
+    background:var(--primarioInt);
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: var(--primClaro);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none; /*solo en dispositivos pequeños como tel*/
+}
+
+#check{
+    display: none;
+}
+
+
+/*tablet*/
+@media (max-width: 1245px) {
+    .enlace{
+        padding-left: 10px;
+        
+    }
+
+    .nav ul li a{
+        font-size: 10px;
+        position: fixed;
+    }
+}
+
+
+/*CELULAR*/
+@media (max-width: 768px) {
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:var(--primarioInt2);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+
+    }
+
+    li a:hover li a.active{
+        background: none;
+        color:var(--negro);
+        /*solo cuando el check este activado se busque al "ul" y 
+        el lefy cambia*/
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+}
+
+/*TERMINA Barra de navegacion c*/
+
+@media (min-width: 768px ) {
+    .recuadroContacto
+    .header
+    .parteCentral {
+        flex-direction: row; /* Cambia a fila */
+        justify-content: space-between; /* Separa el logo de los enlaces */
+        align-items: center;
+    }
+
+    .logoNav {
+        margin-right: auto; /* Empuja el logo a la izquierda */
+    }
+}
+
+/*Comienza parte central*/
+.parteCentral{
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    color:var(--primario);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.logoParteCentral{
+    max-height: 40dvw; /* Ajusta la altura máxima */
+    width: auto; /* Permite que la anchura se ajuste automáticamente */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+
+    transition: transform 0.6s ease; /* Tiempo y tipo de transición */
+
+}
+
+.logoParteCentral:hover{
+    transform: translateY(-20px); /* Mueve la imagen hacia arriba 20px */
+}
+
+.span1{
+    color:#21209C;  
+}
+
+.span2{
+    color:#C5FFF8;
+}
+
+.span3{
+    color:#21209C;
+}
+
+/**Contacto*/
+
+.recuadroContacto{
+    background:var(--botonLetras); /* Color de fondo */
+    padding: 80px 60px; /* Espaciado interno del recuadro */
+    text-align: center; /* Centra el texto */
+
+}
+
+/*comienza la parte del main*/
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+
+.sombra{
+    background: linear-gradient(to bottom,var(--primarioInt2),var(--primario),var(--primClaro));
+    padding: 2rem;
+}
+
+.contTextos{
+    text-align:center;
+    color:var(--blanco);
+    font-size: 1.2rem;
+    padding: 20px; /* Espacio interno */
+    line-height:1.9;
+    justify-content: space-around;
+}
+
+/*cuadricula*/
+
+.contenedor-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas de igual tamaño */
+    padding: 20px;
+    align-items: stretch; /* Asegura que los cuadros ocupen el mismo tamaño vertical */
+}
+
+.cuadro{
+    background-color:var(--blanco);
+    padding: 40px;
+    font-size: 1.2rem;
+    color: var(--negro);
+    text-align:justify;
+    margin-top: 0;
+    line-height: 1.9;
+}
+
+.cuadro h2{
+    text-align: center;
+}
+
+/*imagenes dentro de los cuadros*/
+
+.contimagen{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-imagenesProyectos {
+    width: 100%;
+    height: 100%; /* Ocupa toda la altura del cuadro */
+
+    padding: 0;
+    margin-bottom: 0;
+   
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente dentro del contenedor */
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+.imagenProyecto{
+    width: 100%;
+    height: 100%;
+    max-width: 900px;   /* Tamaño máximo para que no se agrande más allá de 500px */
+    object-fit:cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+    padding: 0;
+    margin: 0;
+    display: block; /* Elimina cualquier espacio en línea por defecto */
+}
+
+
+/*otra area*/
+
+.textoDescubre{
+    color:var(--negro);
+    font-weight: 600;
+}
+
+.boton{
+    background-color: var(--primarioInt);
+    color:var(--botonLetras);
+    padding: 12px 24px;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    
+    text-align: center;
+    border: none;
+   
+    display: inline-block;
+    transition: transform 0.3s ease; /* Transición suave para el efecto de agrandamiento */
+}
+
+
+.boton:hover{
+    cursor:pointer;
+    transform: scale(1.1); /* Aumenta el tamaño del botón al 110% */
+}
+
+.zoomH{
+    transition: transform 0.3s ease; /* Transición suave para el efecto de agrandamiento */
+    margin: 30px;
+}
+
+.zoomH:hover{
+    transform: scale(1.1); /* Aumenta el tamaño del botón al 110% */
+}
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-cuadricula {
+      grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas (cuadros apilados) */
+    }
+
+    .experiencia{
+        font-size: 1.4rem; /* Disminuye el tamaño de la fuente en pantallas más pequeñas */
+        padding: 15px; /* Reduce el padding */
+    }
+
+    .boton{
+        padding: 10px 20px; /* Ajusta el tamaño del botón */
+        font-size: 1.2rem; /* Disminuye el tamaño del texto del botón */
+    }
+
+}
+
+/*seccion del footer*/
+footer{
+    text-align: center;
+    align-items: center;
+    height: 5rem;
+}
+
+.textFooter{
+    margin-top: 5rem;
+    font-weight: bold;
+}
+
+/*----------------ESTILOS DEL APARTADO DE SERVICIOS CORRECTIVOS-----------------------------*/
+.flotante{
+    position: fixed; /* Hace que el recuadro se mantenga fijo en la pantalla */
+    top: 550px; /* Posiciona el recuadro ligeramente por debajo del borde superior */
+    right: 900px; /* Coloca el recuadro pegado al borde derecho */
+    left: 10px; /* Coloca el recuadro pegado al borde izquierdo */
+    background:var(--botonLetras); /* Color de fondo */
+    padding: 10px 10px; /* Espaciado interno del recuadro */
+    text-align: center; /* Centra el texto */
+    height: auto;
+    border-radius: 50px;
+}
+
+.flotante h3{
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.flotante-btn{
+    margin: 0.5rem;
+    box-shadow: 0px 10px 30px 10px var(--primario);
+}
+
+.leyenda{
+    color:var(--botonLetras);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .flotante {
+        font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+        padding: 8px; /* Reduce el espaciado interno */
+        right: 10px; /* Ajusta la posición a la derecha */
+        left: 10px; /* Ajusta la posición a la izquierda */
+        margin:5rem;
+    }
+}
+
+
+/*-----estilos de la parte del menu de servicios-------------------*/
+.menu {
+    grid-template-columns: repeat(4, 1fr); /* 3 columnas de igual tamaño */
+    display: grid;
+    gap:10px;
+    padding: 0;
+}
+
+.cMenu a{
+    cursor: pointer;
+    display: block;  /* Hace que el enlace abarque todo el cuadro */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Para que tome el color del texto circundante o el que prefieras */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.cMenu{
+    transition: transform 0.3s ease; /* Transición suave para el efecto de agrandamiento */
+}
+
+.cMenu:hover{
+    background-color: var(--primarioInt2);
+    color:var(--botonLetras);
+    transform: scale(1.1); /* Aumenta el tamaño del botón al 110% */   
+}
+
+.cMenu a :focus{
+    background-color: var(--botonLetras);
+}
+
+.descripcion{
+    text-align: center;
+}
+
+.serviciosAire p{
+    text-align:justify;
+    padding: 10px;
+}
+
+.serviciosAire h4{
+    text-align: left;
+    color:var(--primario);
+}
+
+.serviciosAire h3{
+    color:var(--primarioInt);
+}
+
+.serviciosAire{
+    padding: 50px;
+    margin: 15px 15px;
+    color:var(--negro);
+    border-style:ridge;
+    border-radius: 20px;
+    border-color: var(--primarioInt);
+    border-width: 3px; /* Asegúrate de definir el grosor si no lo tienes ya */
+    border-radius: 20px;
+}
+
+/*servicio de emergencia*/
+
+.cuadro.cMenu.emergenciaC{
+    background-color: #FFA500; /* Color naranja */
+    color:var(--negro); /* Color del texto más claro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cuadro.cMenu.emergenciaC:hover{
+    background-color:var(--resaltar);
+    color: #FFE4B5;
+}
+
+.cuadro.cMenu.emergenciaC .boton.emergenciaCCC{
+    background-color: #FCFFC1; /* Botón de color naranja fuerte */ 
+    color: #E85C0D; /* Texto del botón de un naranja más claro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambia los colores del botón al pasar el cursor */
+.cuadro.cMenu.emergenciaC .boton.emergenciaCCC:hover{
+    background-color: #FFD580; /* Fondo del botón cambia a un naranja más claro */ 
+    color: #E85C0D;
+}
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu {
+      grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas (cuadros apilados) */
+    }
+
+    .serviciosAire{
+        padding: 10px;
+    }
+
+
+}
+
+/*-------------comienza la parte individual de cada integrante -------------------*/
+
+/*---PARTE DE REFRIGERACION-------------------------------------------------------*/
+/*---DIANA - parte de mini splits y chillers */
+.miniSplits h5 {
+    align-items: center;
+    text-align: center;
+}
+
+.ref{
+    padding: 0;
+}
+
+
+/*parte de la lista*/
+.lista { 
+    padding-left: 20px; /* Espacio a la izquierda de la lista */ 
+    text-align:justify;
+} 
+
+.item { 
+    position: relative; 
+    padding-left: 20px; /* Espacio para el marcador */ 
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */ 
+} 
+
+.item::before { 
+    content: "•"; /* Marcador de lista */ 
+    position: absolute; 
+    left: 0;
+    color: var(--resaltar);
+}
+
+/*------Aire acondicionado-------------*/
+
+.accion{
+    gap:30px;
+}
+
+.accionC{
+    transition: background-color 0.3s ease,color 0.3s ease;
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+}
+/* Cambia el color de fondo al pasar el cursor */ 
+.accionC:hover { 
+    background-color: var(--resaltar); 
+    /* Reemplaza con el color que desees */
+}
+
+.accionC:hover h2 span{
+    color:var(--blanco);
+}
+
+.accionC:hover h3{
+    color:#FFE893;
+}
+
+
+/* Media Query para pantallas pequeñas */ 
+@media (max-width: 768px) { 
+    .contenedor-cuadricula .accion{ 
+        grid-template-columns: 1fr; /* Cambia a una sola columna */ 
+        gap: 20px; /* Mantén el espacio entre los cuadros */ 
+    }
+}
+
+/*-----------PARTE DE GALERIA DE PROYECTOS-----------------------*/
+.carrusel-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    width: 100%;
+    height: auto; /* Altura del viewport */
+    max-width: 800px;
+    margin: 0 auto; /* Centrado horizontal adicional en caso de necesitarlo */
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Para que los botones se posicionen correctamente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+  
+.cuadro-carr {
+    min-width: 100%;
+    flex: 0 0 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cuadro-carr h2 {
+    font-size: 1.5rem;
+    color:var(--primarioInt2);
+    margin-bottom: 25px;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.cuadro-carr p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5; 
+    margin: 0;
+    text-align: center;
+}
+
+/* Botones del carrusel */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.btn.anterior {
+    left: 10px;
+}
+
+.btn.siguiente {
+    right: 10px;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .cuadro-carr {
+        padding: 10px;
+    }
+
+    .cuadro-carr h2 {
+        font-size: 1.2rem; /* Más compacto */
+    }
+
+    .cuadro-carr p {
+        font-size: 0.9rem; 
+        line-height: 1.4;
+        margin: 0 5px; /* Añade margen interno */
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cuadro-carr {
+        padding: 8px;
+    }
+
+    .cuadro-carr h2 {
+        font-size: 1rem; /* Compacto */
+    }
+
+    .cuadro-carr p {
+        font-size: 0.8rem; 
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 6px;
+    }
+}
+
+.imgLogos {
+    height: 50px;
+    width: 100px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.imgLogos:hover {
+    transform: scale(1.2);
+}
+
+.imgProyectos {
+    max-height: 450px;
+    max-width: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.imgProyectos:hover {
+    transform: scale(1.1);
+}
+
+.contenido-proyecto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.texto-proyecto {
+    max-width: 400px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+.texto-proyecto p {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.logos-proyecto {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .imgProyectos {
+        max-height: 250px;
+        max-width: 250px;
+    }
+
+    .texto-proyecto {
+        font-size: 0.9rem;
+    }
+
+    .logos-proyecto {
+        gap: 8px;
+    }
+
+    .imgLogos {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgProyectos {
+        max-height: 200px;
+        max-width: 200px;
+    }
+
+    .texto-proyecto {
+        font-size: 0.8rem;
+    }
+
+    .logos-proyecto {
+        gap: 5px;
+    }
+
+    .imgLogos {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/*-------------------------BOTON DE WATSSAP------------------------*/
+.btn-whatsapp {
+    position: fixed; /* Fijo para mantenerse visible al hacer scroll */
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE52;
+    transform: scale(1.1);
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.close-chat {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-chat:hover {
+    color: #ccc;
+}
+
+.chat-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chat-text {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    overflow-wrap: break-word;
+}
+
+.send-button {
+    background-color: #25D366;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.send-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.send-button:hover {
+    background-color: #1EBE52;
+}
